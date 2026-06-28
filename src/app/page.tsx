@@ -2,8 +2,7 @@ import React from 'react';
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-stone-50 text-slate-900 font-sans antialiased selection:bg-pink-200">
-      
+    <div className="min-h-screen bg-stone-50 text-slate-900 font-serif antialiased selection:bg-pink-200 h-full w-full bg-[url('images/group.png')] bg-cover bg-center cursor-[url(images/windows-98-pointer.svg),pointer]">
       {/* 1. PLAYFUL FLOATING NAVIGATION */}
       <nav className="sticky top-4 z-50 max-w-7/8 mx-auto px-4">
         <div className="bg-white/90 backdrop-blur-md border-2 border-slate-900 rounded-2xl px-6 py-3 flex justify-between items-center shadow-[4px_4px_0px_0px_rgba(15,23,42,1)]">
@@ -16,10 +15,10 @@ export default function Home() {
         </div>
       </nav>
 
-      <main className="max-w-3/4 mx-auto px-6 py-12 md:py-20 space-y-20">
+      <main className="max-w-6/7 mx-auto px-6 py-12 md:py-20 space-y-20">
         
         {/* 2. HERO / WELCOME SECTION */}
-        <section id="about" className="space-y-6 scroll-mt-28">
+        <section id="about" className="space-y-6 scroll-mt-28 bg-white/90 backdrop-blur-md border-2 border-slate-900 rounded-2xl p-6 items-center shadow-[4px_4px_0px_0px_rgba(15,23,42,1)]">
           <div className="space-y-3">
             {/* Fun decorative badge */}
             <span className="inline-block bg-pink-100 text-pink-600 text-xs font-extrabold px-3 py-1 rounded-full uppercase tracking-wider transform -rotate-1">
@@ -86,7 +85,7 @@ export default function Home() {
             <div className="bg-violet-50 border-2 border-slate-900 rounded-2xl p-6 shadow-[6px_6px_0px_0px_rgba(15,23,42,1)] space-y-4">
               <div className="flex justify-between items-start flex-wrap gap-2">
                 <h3 className="font-black text-xl text-slate-900 hover:text-violet-700 transition-colors">
-                  <a href="#" className="inline-flex items-center gap-2">
+                  <a href="/portfolio/projects/woodscoffee" className="inline-flex items-center gap-2">
                     Woods Coffee Website Reimagined: A Case Study
                   </a>
                 </h3>
