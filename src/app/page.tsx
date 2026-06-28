@@ -103,7 +103,6 @@ export default function Home() {
             </div>
           </div>
         </section>
-
         {/* 4. SKILLS SECTION */}
         <section id="skills" className="space-y-6 scroll-mt-28">
           <div className="border-b-4 border-slate-900 pb-2">
