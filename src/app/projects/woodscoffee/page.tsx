@@ -113,6 +113,9 @@ export default function WoodsCoffeeCaseStudy() {
               <p className="text-xs text-neutral-600 leading-relaxed">
                 <strong>Solution:</strong> Surfaced critical utility toggles immediately to the viewport header and increased interactive target areas for seamless tap gestures.
               </p>
+              <a href="/webApp" className="text-emerald-500 hover:text-emerald-600 font-bold text-sm">
+                View the redesigned web app
+              </a>
             </div>
 
           </div>

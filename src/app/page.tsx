@@ -2,128 +2,152 @@ import React from 'react';
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-stone-50 text-slate-900 font-serif antialiased selection:bg-pink-200 h-full w-full bg-[url('images/group.png')] bg-cover bg-center cursor-[url(images/windows-98-pointer.svg),pointer]">
-      {/* 1. PLAYFUL FLOATING NAVIGATION */}
-      <nav className="sticky top-4 z-50 max-w-7/8 mx-auto px-4">
-        <div className="bg-white/90 backdrop-blur-md border-2 border-slate-900 rounded-2xl px-6 py-3 flex justify-between items-center shadow-[4px_4px_0px_0px_rgba(15,23,42,1)]">
-          <span className="text-sm font-black tracking-wider text-pink-500 uppercase">Hi!</span>
-          <div className="space-x-4 md:space-x-6 text-xs font-bold tracking-wide uppercase">
-            <a href="#about" className="text-slate-700 hover:text-pink-500 transition-colors">About</a>
-            <a href="#projects" className="text-slate-700 hover:text-emerald-500 transition-colors">Projects</a>
-            <a href="#skills" className="text-slate-700 hover:text-violet-500 transition-colors">Skills</a>
+    // Background uses a soft, warm cream-grid aesthetic inspired by image_d940f5.jpg and image_d943bf.jpg
+    <div className="min-h-screen bg-[#FDFBF7] text-[#2C2523] font-serif antialiased selection:bg-[#F3C1B7] h-full w-full bg-[radial-gradient(#E8E2D5_1px,transparent_1px)] [background-size:16px_16px] p-4 md:p-8 cursor-[url(images/windows-98-pointer.svg),pointer]">
+      
+      {/* 1. RETRO WINDOW COMPONENT: HEADER / NAV */}
+      <nav className="max-w-4xl mx-auto mb-12 border-2 border-[#2C2523] rounded-xl bg-white shadow-[4px_4px_0px_0px_#2C2523] overflow-hidden">
+        {/* Window Top Bar (image_d940f5.jpg style) */}
+        <div className="bg-[#EAA194] border-b-2 border-[#2C2523] px-4 py-2 flex justify-between items-center">
+          <div className="flex space-x-1.5">
+            <div className="w-3 h-3 rounded-full border border-[#2C2523] bg-[#E76F51]"></div>
+            <div className="w-3 h-3 rounded-full border border-[#2C2523] bg-[#F4A261]"></div>
+            <div className="w-3 h-3 rounded-full border border-[#2C2523] bg-[#2A9D8F]"></div>
+          </div>
+          <span className="text-xs font-mono font-bold tracking-wider uppercase text-[#2C2523]">maya_explorer.exe</span>
+          <div className="w-10"></div>
+        </div>
+        {/* Navigation Links */}
+        <div className="px-6 py-4 flex justify-between items-center flex-wrap gap-4 bg-[#FDFBF7]">
+          <span className="text-lg font-black tracking-tighter uppercase text-[#E76F51]">M // G</span>
+          <div className="space-x-6 text-xs font-mono font-bold uppercase tracking-wide">
+            <a href="#about" className="hover:underline text-[#2C2523]">About</a>
+            <a href="#projects" className="hover:underline text-[#2A9D8F]">Projects</a>
+            <a href="#skills" className="hover:underline text-[#E76F51]">Toolkit</a>
           </div>
         </div>
       </nav>
 
-      <main className="max-w-6/7 mx-auto px-6 py-12 md:py-20 space-y-20">
+      <main className="max-w-4xl mx-auto space-y-12">
         
-        {/* 2. HERO / WELCOME SECTION */}
-        <section id="about" className="space-y-6 scroll-mt-28 bg-white/90 backdrop-blur-md border-2 border-slate-900 rounded-2xl p-6 items-center shadow-[4px_4px_0px_0px_rgba(15,23,42,1)]">
-          <div className="space-y-3">
-            {/* Fun decorative badge */}
-            <span className="inline-block bg-pink-100 text-pink-600 text-xs font-extrabold px-3 py-1 rounded-full uppercase tracking-wider transform -rotate-1">
-              Welcome to my space
-            </span>
-            <h1 className="text-4xl md:text-5xl font-black tracking-tight text-slate-900 leading-none">
-              Maya Galley
-            </h1>
-            <p className="text-lg font-bold text-emerald-600 tracking-wide">
-              Software Engineer & Full-Stack Developer
+        {/* 2. HERO / ABOUT WINDOW */}
+        <section id="about" className="border-2 border-[#2C2523] rounded-xl bg-white shadow-[6px_6px_0px_0px_#2C2523] overflow-hidden grid grid-cols-1 md:grid-cols-5">
+          {/* Left Block - Text Content */}
+          <div className="p-8 md:col-span-3 space-y-6 flex flex-col justify-center">
+            <div className="space-y-2">
+              <span className="inline-block bg-[#F4E6D6] text-[#C87A53] text-xs font-mono font-bold px-2.5 py-1 rounded border border-[#2C2523]">
+                SYSTEM STATUS: ONLINE
+              </span>
+              <h1 className="text-4xl md:text-5xl font-black tracking-tight text-[#2C2523]">
+                Maya Galley
+              </h1>
+              <p className="text-base font-mono font-bold text-[#2A9D8F]">
+                &gt; Software Engineer & Full-Stack Developer
+              </p>
+            </div>
+            
+            <p className="text-[#4A3E3D] leading-relaxed text-sm font-medium">
+              I build clean, accessible, and user-centric web and mobile applications. 
+              I thrive on turning complex logic into interactive, dynamic, and joyful digital experiences!
             </p>
-          </div>
-          
-          <p className="text-slate-700 leading-relaxed font-medium text-base">
-            I build clean, accessible, and user-centric web and mobile applications. 
-            I thrive on turning complex logic into interactive, dynamic, and joyful digital experiences!
-          </p>
 
-          {/* Bright, high-contrast action buttons */}
-          <div className="flex flex-wrap gap-3 text-sm font-bold pt-2">
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="bg-violet-500 text-white border-2 border-slate-900 px-4 py-2 rounded-xl shadow-[3px_3px_0px_0px_rgba(15,23,42,1)] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[2px_2px_0px_0px_rgba(15,23,42,1)] transition-all">
-              GitHub
-            </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="bg-pink-400 text-white border-2 border-slate-900 px-4 py-2 rounded-xl shadow-[3px_3px_0px_0px_rgba(15,23,42,1)] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[2px_2px_0px_0px_rgba(15,23,42,1)] transition-all">
-              LinkedIn
-            </a>
-            <a href="/resume.pdf" download className="bg-amber-300 text-slate-900 border-2 border-slate-900 px-4 py-2 rounded-xl shadow-[3px_3px_0px_0px_rgba(15,23,42,1)] hover:translate-x-[1px] hover:translate-y-[1px] hover:shadow-[2px_2px_0px_0px_rgba(15,23,42,1)] transition-all">
-              Resume.pdf
-            </a>
+            <div className="flex flex-wrap gap-3 text-xs font-mono font-bold pt-2">
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="bg-[#2A9D8F] text-white border-2 border-[#2C2523] px-4 py-2 rounded-lg shadow-[3px_3px_0px_0px_#2C2523] hover:translate-y-0.5 hover:shadow-[1px_1px_0px_0px_#2C2523] transition-all">
+                GitHub
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="bg-[#EAA194] text-[#2C2523] border-2 border-[#2C2523] px-4 py-2 rounded-lg shadow-[3px_3px_0px_0px_#2C2523] hover:translate-y-0.5 hover:shadow-[1px_1px_0px_0px_#2C2523] transition-all">
+                LinkedIn
+              </a>
+              <a href="/resume.pdf" download className="bg-[#E9C46A] text-[#2C2523] border-2 border-[#2C2523] px-4 py-2 rounded-lg shadow-[3px_3px_0px_0px_#2C2523] hover:translate-y-0.5 hover:shadow-[1px_1px_0px_0px_#2C2523] transition-all">
+                Resume.pdf
+              </a>
+            </div>
+          </div>
+
+          {/* Right Block - Color Block Graphic (inspired by the layout structure of image_d940a0.jpg) */}
+          <div className="bg-[#F4E6D6] md:col-span-2 border-t-2 md:border-t-0 md:border-l-2 border-[#2C2523] min-h-[200px] bg-cover bg-center bg-[url('images/group.png')] relative">
+            <div className="absolute inset-0 bg-[#E76F51]/10 mix-blend-multiply"></div>
           </div>
         </section>
 
-        {/* 3. COLORFUL PROJECTS SECTION */}
-        <section id="projects" className="space-y-8 scroll-mt-28">
-          <div className="border-b-4 border-slate-900 pb-2 flex items-center justify-between">
-            <h2 className="text-xl font-black tracking-wide text-slate-900 uppercase">
-              Things I've Built 
-            </h2>
+        {/* 3. ASYMMETRICAL COLOR-BLOCKED PROJECTS (image_d940a0.jpg & image_d943bf.jpg Style) */}
+        <section id="projects" className="space-y-6">
+          <div className="flex items-center space-x-4">
+            <h2 className="text-lg font-black tracking-wider uppercase text-[#2C2523]">Works_In_Directory</h2>
+            <div className="h-[2px] bg-[#2C2523] flex-grow"></div>
           </div>
 
-          <div className="space-y-8">
-            {/* Project 1 - Emerald Palette */}
-            <div className="bg-emerald-50 border-2 border-slate-900 rounded-2xl p-6 shadow-[6px_6px_0px_0px_rgba(15,23,42,1)] space-y-4">
-              <div className="flex justify-between items-start flex-wrap gap-2">
-                <h3 className="font-black text-xl text-slate-900 hover:text-emerald-700 transition-colors">
-                  <a href="#" className="inline-flex items-center gap-2">
-                    Plus 1 Social Club
-                  </a>
-                </h3>
-                <span className="text-xs font-mono font-bold bg-white border border-slate-900 px-2 py-0.5 rounded-md text-slate-700">2026</span>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            
+            {/* Project 1: Sage / Emerald Theme */}
+            <div className="bg-[#E8F1EC] border-2 border-[#2C2523] rounded-xl overflow-hidden shadow-[5px_5px_0px_0px_#2C2523] flex flex-col justify-between">
+              <div className="bg-[#2A9D8F] text-white px-4 py-1.5 border-b-2 border-[#2C2523] font-mono text-xs flex justify-between">
+                <span>plus1_social.app</span>
+                <span>✖</span>
               </div>
-              <p className="text-sm text-slate-700 leading-relaxed font-medium">
-                A community based, full-stack application. Designed to connect people with similar interests and facilitate meaningful interactions through posted events. Utilizing modern web technologies to create a seamless user experience.
-              </p>
-              <div className="flex flex-wrap gap-2 text-xs font-bold">
-                <span className="bg-white border border-slate-900 px-2.5 py-1 rounded-lg text-emerald-700">React Native</span>
-                <span className="bg-white border border-slate-900 px-2.5 py-1 rounded-lg text-emerald-700">Firebase</span>
-                <span className="bg-white border border-slate-900 px-2.5 py-1 rounded-lg text-emerald-700">IOS</span>
+              <div className="p-6 space-y-4 flex-grow">
+                <h3 className="font-black text-xl text-[#2C2523]">Plus 1 Social Club</h3>
+                <p className="text-xs text-[#4A3E3D] leading-relaxed font-medium">
+                  A community-based full-stack application. Designed alongside groupmates to connect people with similar interests through posted events. Developed with client insights for seamless discovery.
+                </p>
+                <div className="flex flex-wrap gap-1.5 text-[10px] font-mono font-bold">
+                  <span className="bg-white border border-[#2C2523] px-2 py-0.5 rounded text-[#2A9D8F]">React Native</span>
+                  <span className="bg-white border border-[#2C2523] px-2 py-0.5 rounded text-[#2A9D8F]">Firebase</span>
+                </div>
               </div>
-              <a href="https://www.youtube.com/watch?v=lDkp4lsNCpI" className="text-xs font-mono font-bold py-0.5 rounded-md text-slate-700 hover:text-pink-700">Watch the Demo Here</a>
+              <div className="p-4 bg-white/60 border-t border-[#2C2523] text-center">
+                <a href="https://www.youtube.com/watch?v=lDkp4lsNCpI" target="_blank" rel="noopener noreferrer" className="text-xs font-mono font-bold text-[#2A9D8F] hover:underline">
+                  Run Demo Video
+                </a>
+              </div>
             </div>
 
-            {/* Project 2 - Violet Palette */}
-            <div className="bg-violet-50 border-2 border-slate-900 rounded-2xl p-6 shadow-[6px_6px_0px_0px_rgba(15,23,42,1)] space-y-4">
-              <div className="flex justify-between items-start flex-wrap gap-2">
-                <h3 className="font-black text-xl text-slate-900 hover:text-violet-700 transition-colors">
-                  <a href="/portfolio/projects/woodscoffee" className="inline-flex items-center gap-2">
-                    Woods Coffee Website Reimagined: A Case Study
-                  </a>
-                </h3>
-                <span className="text-xs font-mono font-bold bg-white border border-slate-900 px-2 py-0.5 rounded-md text-slate-700">2026</span>
+            {/* Project 2: Terracotta / Pink Theme */}
+            <div className="bg-[#FBF2EF] border-2 border-[#2C2523] rounded-xl overflow-hidden shadow-[5px_5px_0px_0px_#2C2523] flex flex-col justify-between">
+              <div className="bg-[#E76F51] text-white px-4 py-1.5 border-b-2 border-[#2C2523] font-mono text-xs flex justify-between">
+                <span>woods_redesign.cfg</span>
+                <span>✖</span>
               </div>
-              <p className="text-sm text-slate-700 leading-relaxed font-medium">
-                Highlight another stellar project, like a rich mobile app design or specialized data mapping tool. Emphasize full-stack capabilities, database architectures, and API integrations.
-              </p>
-              <div className="flex flex-wrap gap-2 text-xs font-bold">
-                <span className="bg-white border border-slate-900 px-2.5 py-1 rounded-lg text-violet-700">TypeScript</span>
-                <span className="bg-white border border-slate-900 px-2.5 py-1 rounded-lg text-violet-700">Node.js</span>
-                <span className="bg-white border border-slate-900 px-2.5 py-1 rounded-lg text-violet-700">PostgreSQL</span>
+              <div className="p-6 space-y-4 flex-grow">
+                <h3 className="font-black text-xl text-[#2C2523]">Woods Coffee Website Reimagined</h3>
+                <p className="text-xs text-[#4A3E3D] leading-relaxed font-medium">
+                  A comprehensive UX concept case study evaluating layout heuristics. Built around intensive user testing scenarios to create a fluid digital ordering architecture.
+                </p>
+                <div className="flex flex-wrap gap-1.5 text-[10px] font-mono font-bold">
+                  <span className="bg-white border border-[#2C2523] px-2 py-0.5 rounded text-[#E76F51]">TypeScript</span>
+                  <span className="bg-white border border-[#2C2523] px-2 py-0.5 rounded text-[#E76F51]">Tailwind</span>
+                </div>
+              </div>
+              <div className="p-4 bg-white/60 border-t border-[#2C2523] text-center">
+                <a href="/portfolio/projects/woodscoffee" className="text-xs font-mono font-bold text-[#E76F51] hover:underline">
+                  Open Case Study
+                </a>
               </div>
             </div>
+
           </div>
         </section>
-        {/* 4. SKILLS SECTION */}
-        <section id="skills" className="space-y-6 scroll-mt-28">
-          <div className="border-b-4 border-slate-900 pb-2">
-            <h2 className="text-xl font-black tracking-wide text-slate-900 uppercase">
-              My Toolkit
-            </h2>
+
+        {/* 4. SKILLS / WINDOW MATRIX */}
+        <section id="skills" className="border-2 border-[#2C2523] rounded-xl bg-white shadow-[4px_4px_0px_0px_#2C2523] overflow-hidden">
+          <div className="bg-[#E9C46A] border-b-2 border-[#2C2523] px-4 py-1.5 text-xs font-mono font-bold uppercase text-[#2C2523]">
+            core_dependencies.log
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm font-bold">
-            <div className="bg-pink-50 border-2 border-slate-900 p-4 rounded-xl shadow-[4px_4px_0px_0px_rgba(15,23,42,1)] space-y-1">
-              <span className="text-pink-600 block text-xs uppercase tracking-wider font-extrabold">Languages</span>
-              <p className="text-slate-800">JavaScript, TypeScript, Python, HTML/CSS</p>
+          <div className="p-6 grid grid-cols-1 sm:grid-cols-2 gap-6 bg-[#FDFBF7]">
+            <div className="space-y-1">
+              <span className="text-[#C87A53] font-mono text-xs font-bold uppercase">&gt; Languages</span>
+              <p className="text-sm font-medium text-[#2C2523]">JavaScript, TypeScript, Python, HTML/CSS</p>
             </div>
-            <div className="bg-amber-50 border-2 border-slate-900 p-4 rounded-xl shadow-[4px_4px_0px_0px_rgba(15,23,42,1)] space-y-1">
-              <span className="text-amber-600 block text-xs uppercase tracking-wider font-extrabold">Frameworks & Tools</span>
-              <p className="text-slate-800">React, Next.js, Node.js, Tailwind, Git</p>
+            <div className="space-y-1">
+              <span className="text-[#2A9D8F] font-mono text-xs font-bold uppercase">&gt; Frameworks & Tools</span>
+              <p className="text-sm font-medium text-[#2C2523]">React, Next.js, Node.js, Tailwind, Git</p>
             </div>
           </div>
         </section>
 
         {/* 5. FOOTER */}
-        <footer className="text-xs font-mono font-bold text-slate-500 pt-8 border-t-2 border-dashed border-slate-300 text-center">
-          <p>Made with 💖 and Next.js.</p>
+        <footer className="text-center text-xs font-mono font-bold text-[#A69994] pt-8 border-t border-dashed border-[#E8E2D5]">
+          <p>System Build v24.18.0 - Maya Galley</p>
         </footer>
 
       </main>
