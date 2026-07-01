@@ -1,5 +1,7 @@
+
 import React from 'react';
 //import { OpenInNew } from 'lucide-react';
+import Link from 'next/link';
 
 export default function WoodsCoffeeHomepage() {
   return (
@@ -13,18 +15,23 @@ export default function WoodsCoffeeHomepage() {
             <span className="text-xl font-black tracking-tight text-slate-900">WOODS 🌲 COFFEE</span>
           </div>
           
-          {/* Nav Links */}
+          {/* 2. Swapped <a> tags for <Link href="..."> components */}
           <div className="hidden md:flex items-center space-x-6 text-xs font-semibold text-slate-700">
-            <a href="#shop" className="hover:text-[#5C473E] transition-colors">Shop</a>
-            <a href="#menu" className="hover:text-[#5C473E] transition-colors">Menu</a>
-            <a href="#locations" className="hover:text-[#5C473E] transition-colors">Find a Location</a>
-            <a href="#about" className="hover:text-[#5C473E] transition-colors">About Us</a>
-            <a href="#contact" className="hover:text-[#5C473E] transition-colors">Contact</a>
+            <Link href="/projects/woodscoffee/webApp/shop" className="hover:text-[#5C473E] transition-colors">Shop</Link>
+            <Link href="/projects/woodscoffee/webApp/menu" className="hover:text-[#5C473E] transition-colors">Menu</Link>
+            <Link href="/projects/woodscoffee/webApp/locations" className="hover:text-[#5C473E] transition-colors">Find a Location</Link>
+            <Link href="/projects/woodscoffee/webApp/about" className="hover:text-[#5C473E] transition-colors">About Us</Link>
+            <Link href="/projects/woodscoffee/webApp/contact" className="hover:text-[#5C473E] transition-colors">Contact</Link>
+            
             <span className="text-gray-300">|</span>
-            <a href="#register" className="hover:text-[#5C473E] transition-colors">Register</a>
-            <button className="bg-[#3D2A25] text-white px-4 py-1.5 rounded text-xs font-bold hover:bg-[#2A1D1A] transition-colors">
-              Login
-            </button>
+            
+            <Link href="/register" className="hover:text-[#5C473E] transition-colors">Register</Link>
+            
+            <Link href="/login">
+              <button className="bg-[#3D2A25] text-white px-4 py-1.5 rounded text-xs font-bold hover:bg-[#2A1D1A] transition-colors">
+                Login
+              </button>
+            </Link>
           </div>
         </div>
       </nav>
@@ -45,21 +52,23 @@ export default function WoodsCoffeeHomepage() {
             </div>
           </div>
 
-          {/* Updated "Buy" Pills from image_da30d9.jpg */}
-          <div className="flex items-center gap-4 pt-4">
-            <span className="text-sm font-bold text-slate-800">Buy</span>
-            <div className="flex flex-wrap gap-2">
-              <button className="bg-[#9E8474] text-white text-xs font-medium px-6 py-2 rounded-full hover:bg-[#886F60] transition-colors">
-                Merch
-              </button>
-              <button className="bg-[#9E8474] text-white text-xs font-medium px-6 py-2 rounded-full hover:bg-[#886F60] transition-colors">
-                Coffee
-              </button>
-              <button className="bg-[#9E8474] text-white text-xs font-medium px-6 py-2 rounded-full hover:bg-[#886F60] transition-colors">
-                Gift Cards
-              </button>
+            {/* Replace the bottom area of your left hero panel with this
+            <div className="w-full max-w-lg mt-auto">
+            <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-gray-400 block mb-3">
+                Explore More:
+            </span>
+            <div className="grid grid-cols-3 border border-gray-300 rounded-lg overflow-hidden bg-white shadow-sm">
+                <button className="py-4 text-xs font-bold border-r border-gray-200 text-[#3D2A25] bg-[#FAF7F2] hover:bg-[#FAF7F2]/40 transition-colors flex flex-col items-center gap-1">
+                <span className="text-base"></span> Merch
+                </button>
+                <button className="py-4 text-xs font-bold border-r border-gray-200 text-[#3D2A25] hover:bg-[#FAF7F2]/60 transition-colors flex flex-col items-center gap-1">
+                <span className="text-base"></span> Coffee
+                </button>
+                <button className="py-4 text-xs font-bold text-[#3D2A25] hover:bg-[#FAF7F2]/60 transition-colors flex flex-col items-center gap-1">
+                <span className="text-base"></span> Gift Cards
+                </button>
             </div>
-          </div>
+            </div> */}
         </div>
 
         {/* Hero Right Panel (Drinks Image Placeholder) */}
